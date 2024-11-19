@@ -34,11 +34,11 @@ const findTestFile = (filePath) => {
     process.env.VITEST_COVERAGE_INCLUDE = includeFiles.join(",");
 
     execSync(`npm test -- run ${testFiles.join(' ')}`, { stdio: 'inherit' });
-  } else {
+  } else if (nonTestFiles.length === 0) {
     console.log('No co-aligned test files found for staged files.');
   }
 
   if (nonTestFiles.length > 0) {
-    console.error('Staged files without test files:\n\t', nonTestFiles.join('\n\t'));
+    console.error('Found some staged files without a co-aligned test files:\n\t', nonTestFiles.join('\n\t'));
   }
 })();

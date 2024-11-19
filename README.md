@@ -17,7 +17,7 @@ This is a template for creating a TypeScript package.
 ## Getting Started
 
 1. Clone the repository
-2. Set NPM_TOKEN in repository secrets
+2. For private repos: set NPM_TOKEN in repository secrets (For public repos, it is already set via organization secrets)
 3. Run `pnpm install` to install the dependencies
 4. Run `pnpm run build` to build the project
 5. Run `pnpm run dev` to develop the project

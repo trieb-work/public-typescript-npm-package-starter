@@ -8,4 +8,4 @@ if [ "$BRANCH_NAME" = "main" ]; then
 fi
 
 npx --no-install lint-staged
-CI=true npm run test
+node ./scripts/vitest-run-staged.cjs

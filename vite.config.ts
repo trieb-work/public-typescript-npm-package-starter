@@ -9,7 +9,9 @@ export default defineConfig({
     coverage: {
       provider: 'v8', // Use v8 for coverage reporting
       reporter: ['text', 'lcov'], // Generate text and lcov coverage reports
-      include: ['src/**/*.ts'], // Include all TypeScript files for coverage
+      include: process.env.VITEST_COVERAGE_INCLUDE?.split(',') || [
+        'src/**/*.ts',
+      ], // Use the specified files (by scripts/vitest-run-staged.cjs) or default to all files
       exclude: ['node_modules', 'dist'], // Exclude specific directories from coverage
     },
   },

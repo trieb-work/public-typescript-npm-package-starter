@@ -1,3 +1,9 @@
+# [1.0.0-beta.2](https://github.com/trieb-work/next-optimized-redis-cache/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2024-11-19)
+
+### Bug Fixes
+
+- public access ([cfe2845](https://github.com/trieb-work/next-optimized-redis-cache/commit/cfe2845b6e4a9b6f496a7d39f752b767c7670f93))
+
 # 1.0.0-beta.1 (2024-11-19)
 
 ### Bug Fixes

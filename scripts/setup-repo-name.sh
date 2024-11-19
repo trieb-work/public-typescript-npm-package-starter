@@ -12,6 +12,6 @@ mv README_FINAL.md README.md
 # Replace placeholders in regular files only
 for file in *; do
   if [ -f "$file" ]; then
-    sed -i '' "s/typescript-npm-package-starter/$REPO_NAME/g" "$file"
+    sed -i '' "s/public-typescript-npm-package-starter/$REPO_NAME/g" "$file"
   fi
 done

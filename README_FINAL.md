@@ -1,4 +1,4 @@
-# typescript-npm-package-starter NPM Package
+# public-typescript-npm-package-starter NPM Package
 
 ## Getting Started
 

@@ -1,3 +1,9 @@
+# [1.0.0-beta.3](https://github.com/trieb-work/next-optimized-redis-cache/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2024-11-19)
+
+### Bug Fixes
+
+- move to dev packages ([e9c61c0](https://github.com/trieb-work/next-optimized-redis-cache/commit/e9c61c01ea092e55d47c559aafb2d29feaf89998))
+
 # [1.0.0-beta.2](https://github.com/trieb-work/next-optimized-redis-cache/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2024-11-19)
 
 ### Bug Fixes

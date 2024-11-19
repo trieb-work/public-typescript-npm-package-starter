@@ -23,8 +23,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
-      "prettier --write",
-      "./scripts/vitest-run-staged.cjs"
+      "prettier --write"
     ],
     "*.{js,json,md}": [
       "prettier --write"

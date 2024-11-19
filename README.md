@@ -7,7 +7,7 @@ This is a template for creating a TypeScript package.
 - TypeScript
 - Eslint
 - Prettier
-- Semantic Release with auto-generated changelog
+- Semantic Release to NPM and GitHub Releases with auto-generated changelog
 - Testing with Vitest
 - GitHub Actions for test, build and release on main branch
 - Commit message hook for linting staged files

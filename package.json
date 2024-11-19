@@ -1,5 +1,5 @@
 {
-  "name": "next-optimized-redis-cache",
+  "name": "@trieb.work/next-optimized-redis-cache",
   "version": "1.0.0",
   "scripts": {
     "dev": "vitest --watch",

@@ -1,4 +1,4 @@
-# {{REPO_NAME}} NPM Package
+# typescript-npm-package-starter NPM Package
 
 ## Getting Started
 

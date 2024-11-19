@@ -16,7 +16,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A fast, optimized Redis cache for Next.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",

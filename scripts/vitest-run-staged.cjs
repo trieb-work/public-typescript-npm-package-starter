@@ -16,15 +16,28 @@ const findTestFile = (filePath) => {
   });
   const stagedFiles = stagedFilesOutput.trim().split('\n');
 
-  const testFiles = stagedFiles
-    .filter((file) => file.endsWith('.ts') && !file.includes('.test'))
+  const stagedTsFiles = stagedFiles
+    .filter((file) => file.endsWith('.ts') && !file.endsWith('.test.ts'))
+
+  const testFiles = stagedTsFiles
     .map((file) => findTestFile(file))
     .filter(Boolean); // Remove nulls
 
+  const nonTestFiles = stagedTsFiles
+    .filter((file) => !findTestFile(file))
+
   if (testFiles.length > 0) {
-    console.log('Running tests for staged files:', testFiles);
-    execSync(`vitest run ${testFiles.join(' ')}`, { stdio: 'inherit' });
+    console.log('Running tests for staged files:\n  ', testFiles.join('\n  '));
+
+    const includeFiles = testFiles.map((testFile) => testFile.replace(/\.test\.ts$/, ".ts"));
+    process.env.VITEST_COVERAGE_INCLUDE = includeFiles.join(",");
+
+    execSync(`npm test -- run ${testFiles.join(' ')}`, { stdio: 'inherit' });
   } else {
     console.log('No co-aligned test files found for staged files.');
+  }
+
+  if (nonTestFiles.length > 0) {
+    console.error('Staged files without test files:\n\t', nonTestFiles.join('\n\t'));
   }
 })();

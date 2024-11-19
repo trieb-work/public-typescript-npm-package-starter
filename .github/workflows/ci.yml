@@ -41,6 +41,5 @@ jobs:
       
       - name: Dry run the release
         run: |
-          git checkout ${{ github.event.pull_request.base.ref }}
           npx semantic-release --dry-run
 

@@ -1,5 +1,5 @@
 {
-  "name": "@trieb.work/next-optimized-redis-cache",
+  "name": "@trieb.work/public-typescript-npm-package-starter",
   "version": "1.0.0",
   "scripts": {
     "dev": "vitest --watch",
@@ -16,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "A fast, optimized Redis cache for Next.js",
+  "description": "",
   "publishConfig": {
     "access": "public"
   },

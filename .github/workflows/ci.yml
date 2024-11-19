@@ -28,7 +28,21 @@ jobs:
         run: npm run lint
 
       - name: Run tests
-        run: npm run test:coverage
+        run: npm run test
+
+      - name: Code Coverage Comments
+        uses: kcjpop/coverage-comments@v2.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          coverage-file: './coverage/lcov.info'
 
       - name: Build project
         run: npm run build
+      
+      - name: Dry run the release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for Semantic Release
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # NPM token for publishing
+        run: |
+          npx semantic-release --dry-run
+

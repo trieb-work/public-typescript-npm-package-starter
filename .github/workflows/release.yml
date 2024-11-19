@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - beta
 
 jobs:
   release:
@@ -24,6 +25,6 @@ jobs:
 
       - name: Run Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for pushing changes
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # NPM token for publishing
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for Semantic Release
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # NPM token for publishing
         run: npx semantic-release

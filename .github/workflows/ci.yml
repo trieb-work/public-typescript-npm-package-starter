@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # Grant write access to pull request comments
 
     steps:
       - name: Checkout code

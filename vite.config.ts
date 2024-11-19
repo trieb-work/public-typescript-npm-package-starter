@@ -9,6 +9,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8', // Use v8 for coverage reporting
       reporter: ['text', 'lcov'], // Generate text and lcov coverage reports
+      include: ['src/**/*.ts'], // Include all TypeScript files for coverage
       exclude: ['node_modules', 'dist'], // Exclude specific directories from coverage
     },
   },

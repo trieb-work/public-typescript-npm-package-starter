@@ -28,7 +28,13 @@ jobs:
         run: npm run lint
 
       - name: Run tests
-        run: npm run test:coverage
+        run: npm run test
+
+      - name: Code Coverage Comments
+        uses: kcjpop/coverage-comments@v2.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          coverage-file: './coverage/lcov.info'
 
       - name: Build project
         run: npm run build

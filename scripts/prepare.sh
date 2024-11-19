@@ -1,2 +1,2 @@
 #!/bin/sh
-./scripts/setup-hooks.sh
+./scripts/setup-git.sh

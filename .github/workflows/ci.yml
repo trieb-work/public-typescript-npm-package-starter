@@ -8,6 +8,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pull-requests: write
+  deployments: write
+  packages: write
+  statuses: write
+  issues: write
+  actions: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
